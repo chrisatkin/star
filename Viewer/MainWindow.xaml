@@ -1,0 +1,49 @@
+﻿<Window x:Class="Viewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Viewer" Height="713" Width="1302" Name="Viewer" ResizeMode="NoResize" Closing="Viewer_Closing" Loaded="Viewer_Loaded">
+    <Grid Name="Layout">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*" />
+            <RowDefinition Height="480*" />
+            <RowDefinition Height="141*" />
+        </Grid.RowDefinitions>
+        <Grid Height="53" HorizontalAlignment="Left" Name="Header" VerticalAlignment="Top" Width="1280">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300*" />
+                <ColumnDefinition Width="978*" />
+            </Grid.ColumnDefinitions>
+            <Image Height="53" HorizontalAlignment="Left" Name="Logo" Stretch="Fill" VerticalAlignment="Top" Width="300" Source="/viewer;component/Images/logo-wide.png" />
+            <TextBlock Grid.Column="1" Height="53" HorizontalAlignment="Left" Name="Tagline" Text="Viewer" VerticalAlignment="Top" Width="980" FontSize="18" FontWeight="Bold" TextAlignment="Right" />
+        </Grid>
+        <Grid Grid.Row="1" Height="480" HorizontalAlignment="Left" Name="Viewers" VerticalAlignment="Top" Width="1280">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="640*" />
+                <ColumnDefinition Width="640*" />
+            </Grid.ColumnDefinitions>
+            <Image Height="480" HorizontalAlignment="Left" Name="Depth" Stretch="Fill" VerticalAlignment="Top" Width="640" />
+            <Image Grid.Column="1" Height="480" HorizontalAlignment="Left" Name="Skeleton" Stretch="Fill" VerticalAlignment="Top" Width="640" Margin="0" />
+        </Grid>
+        <Grid Grid.Row="2" Height="141" HorizontalAlignment="Left" Name="ControlsLayout" VerticalAlignment="Top" Width="1280">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="175*" />
+                <ColumnDefinition Width="1105*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" Height="139" HorizontalAlignment="Left" Margin="6,2,0,0" Name="ProviderControls" VerticalAlignment="Top" Width="1099" />
+        </Grid>
+        <Grid Height="141" HorizontalAlignment="Left" Name="ViewerControls" VerticalAlignment="Top" Width="175" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="54*" />
+                <ColumnDefinition Width="121*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28*" />
+                <RowDefinition Height="113*" />
+            </Grid.RowDefinitions>
+            <Label Content="Provider" Height="28" HorizontalAlignment="Left" Name="ProviderLabel" VerticalAlignment="Top" />
+            <ComboBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="1,2,0,0" Name="Provider" VerticalAlignment="Top" Width="120" SelectionChanged="_ProviderChangedEvent" />
+            <Button Content="Start" Height="23" Name="Start" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Row="1" Margin="6,1,0,0" Foreground="#FF008900" Click="_StartClickEvent" />
+            <Button Content="Stop" Height="23" HorizontalAlignment="Left" Margin="6,29,0,0" Name="Stop" VerticalAlignment="Top" Width="169" Grid.ColumnSpan="2" Grid.Row="1" Foreground="#FF960000" Click="_StopClickEvent" />
+        </Grid>
+    </Grid>
+</Window>

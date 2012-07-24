@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="org.btg.Star.Rhapsody.ColourFrame" Collapsed="true">
+    <Position X="1.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ColourFrame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="org.btg.Star.Rhapsody.ProviderLoader" Collapsed="true">
+    <Position X="9.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProviderLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="org.btg.Star.Rhapsody.ColourFrameReadyEventArgs" Collapsed="true">
+    <Position X="10.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ColourFrameReadyEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="org.btg.Star.Rhapsody.DepthFrame" Collapsed="true">
+    <Position X="3.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DepthFrame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="org.btg.Star.Rhapsody.DepthFrameReadyEventArgs" Collapsed="true">
+    <Position X="8" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DepthFrameReadyEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="org.btg.Star.Rhapsody.Frame" Collapsed="true">
+    <Position X="4.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Frame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="org.btg.Star.Rhapsody.FrameReadyEventArgs" Collapsed="true">
+    <Position X="10.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>FrameReadyEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="org.btg.Star.Rhapsody.ImageFrame" Collapsed="true">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ImageFrame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="org.btg.Star.Rhapsody.Sensor" Collapsed="true">
+    <Position X="1.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAAAAgAAAAAAAAAAAACAAAIAAAAAQAAAA=</HashCode>
+      <FileName>Sensor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="org.btg.Star.Rhapsody.SkeletonFrame" Collapsed="true">
+    <Position X="6" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SkeletonFrame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="org.btg.Star.Rhapsody.SkeletonFrameReadyEventArgs" Collapsed="true">
+    <Position X="12.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SkeletonFrameReadyEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="org.btg.Star.Rhapsody.Point" Collapsed="true">
+    <Position X="3.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAQAAAAA=</HashCode>
+      <FileName>Point.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="org.btg.Star.Rhapsody.IProvider" Collapsed="true">
+    <Position X="7.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAEAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>IProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="org.btg.Star.Rhapsody.StreamType" Collapsed="true">
+    <Position X="5.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAgAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StreamType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
