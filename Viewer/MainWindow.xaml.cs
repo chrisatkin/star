@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using org.btg.Star.Rhapsody;
 
 namespace Viewer
@@ -14,10 +15,19 @@ namespace Viewer
     /// </summary>
     public partial class MainWindow : Window
     {
+        // Rhapsody
         private Sensor _sensor;
         private List<string> _providers;
+        
+        // Skeleton viewer
         private DrawingGroup group;
         private DrawingImage imageSource;
+
+        // Depth viewer
+        private WriteableBitmap depthBitmap;
+
+        // Color viewer
+        private WriteableBitmap colourBitmap;
 
         public MainWindow()
         {
@@ -59,12 +69,12 @@ namespace Viewer
 
         private void _ColourFrameReady(object sender, ColourFrameReadyEventArgs frame)
         {
-            Console.WriteLine("Viewer: Color frame");
+            ColourDrawingHelper.Draw((ColourFrame) frame.Frame, this.colourBitmap);
         }
 
         private void _DepthFrameReady(object sender, DepthFrameReadyEventArgs frame)
         {
-            Console.WriteLine("Viewer: Depth frame");
+            DepthDrawingHelper.Draw((DepthFrame) frame.Frame, this.depthBitmap);
         }
 
         private void _SkeletonFrameReady(object sender, SkeletonFrameReadyEventArgs frame)
@@ -98,7 +108,7 @@ namespace Viewer
             try
             {
                 Console.WriteLine("Start button pressed");
-                this._sensor.Start(new StreamType[] { StreamType.SkeletonStream});
+                this._sensor.Start(new StreamType[] { StreamType.SkeletonStream, StreamType.ColourStream });
             }
             catch (InvalidOperationException excep)
             {
@@ -131,9 +141,18 @@ namespace Viewer
 
         private void Viewer_Loaded(object sender, RoutedEventArgs e)
         {
+            // Skeleton viewer
             this.group = new DrawingGroup();
             this.imageSource = new DrawingImage(this.group);
             this.Skeleton.Source = this.imageSource;
+
+            // Depth viewer
+            this.depthBitmap = new WriteableBitmap(640, 480, 96.0, 96.0, PixelFormats.Bgr32, null);
+            //this.Depth.Source = this.depthBitmap;
+
+            // Colour Viewer
+            this.colourBitmap = new WriteableBitmap(640, 480, 96.0, 96.0, PixelFormats.Bgr32, null);
+            this.Depth.Source = this.colourBitmap;
         }
     }
 }

@@ -63,7 +63,7 @@ namespace org.btg.Star.Rhapsody.Providers.Kinect
                 case StreamType.ColourStream:
                     if (this.ColourFrameReady != null)
                     {
-                        this._kinect.ColorStream.Enable(Microsoft.Kinect.ColorImageFormat.RgbResolution1280x960Fps12);
+                        this._kinect.ColorStream.Enable(Microsoft.Kinect.ColorImageFormat.RgbResolution640x480Fps30);
                         this._kinect.ColorFrameReady += this._HandleColourFrameReady;
                     }
                 break;
@@ -164,13 +164,13 @@ namespace org.btg.Star.Rhapsody.Providers.Kinect
                     return;
                 }
 
-                frame = new byte[kinect_frame.PixelDataLength];
+                frame = new byte[this._kinect.ColorStream.FramePixelDataLength];
                 kinect_frame.CopyPixelDataTo(frame);
             }
 
             // Convert to Rhapsody frame
             ColourFrame rhapsody_frame = new ColourFrame {
-                Format = ColorImageFormat.Rgb_1280x960_12fps,
+                Format = ColorImageFormat.Rgb_640x480_30fps,
                 Data = frame
             };
 
@@ -196,6 +196,12 @@ namespace org.btg.Star.Rhapsody.Providers.Kinect
 
                 frame = new short[kinect_frame.PixelDataLength];
                 kinect_frame.CopyPixelDataTo(frame);
+
+                // Discard irrelevant data
+                for (int i = 0; i < frame.Length; ++i)
+                {
+                    frame[i] = (short) (frame[i] >> Microsoft.Kinect.DepthImageFrame.PlayerIndexBitmaskWidth);
+                }
 
                 // Convert to Rhapsody frame
                 DepthFrame rhapsody_frame = new DepthFrame
@@ -238,7 +244,7 @@ namespace org.btg.Star.Rhapsody.Providers.Kinect
                     continue;
                 }
 
-                Console.WriteLine("Kinect found skeleton " + kinect_skeleton.TrackingId + " (" + kinect_skeleton.Position.X + ", " + kinect_skeleton.Position.Y + ")");
+                //Console.WriteLine("Kinect found skeleton " + kinect_skeleton.TrackingId + " (" + kinect_skeleton.Position.X + ", " + kinect_skeleton.Position.Y + ")");
                 Skeleton skeleton = new Skeleton
                 {
                     TrackingState = TrackingState.Tracked

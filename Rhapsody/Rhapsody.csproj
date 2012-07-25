@@ -45,8 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorImageFormat.cs" />
+    <Compile Include="ColourDrawingHelper.cs" />
     <Compile Include="ColourFrame.cs" />
     <Compile Include="ColourFrameReadyEventArgs.cs" />
+    <Compile Include="DepthDrawingHelper.cs" />
     <Compile Include="DepthFrame.cs" />
     <Compile Include="DepthFrameReadyEventArgs.cs" />
     <Compile Include="DepthImageFormat.cs" />
