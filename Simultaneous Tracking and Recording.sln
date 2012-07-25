@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinect Provider", "Kinect P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSV Provider", "CSV Provider\CSV Provider.csproj", "{83C056F3-891E-431D-B120-24D01247B179}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default Logger", "DefaultLogger\Default Logger.csproj", "{A7F99068-0200-498A-BC22-72C4488FB8A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,16 @@ Global
 		{83C056F3-891E-431D-B120-24D01247B179}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{83C056F3-891E-431D-B120-24D01247B179}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{83C056F3-891E-431D-B120-24D01247B179}.Release|x86.ActiveCfg = Release|Any CPU
+		{A7F99068-0200-498A-BC22-72C4488FB8A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F99068-0200-498A-BC22-72C4488FB8A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F99068-0200-498A-BC22-72C4488FB8A2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A7F99068-0200-498A-BC22-72C4488FB8A2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A7F99068-0200-498A-BC22-72C4488FB8A2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A7F99068-0200-498A-BC22-72C4488FB8A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F99068-0200-498A-BC22-72C4488FB8A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F99068-0200-498A-BC22-72C4488FB8A2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A7F99068-0200-498A-BC22-72C4488FB8A2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A7F99068-0200-498A-BC22-72C4488FB8A2}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

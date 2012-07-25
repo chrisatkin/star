@@ -1,0 +1,5 @@
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\DefaultLogger\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\_build\debug\DefaultLogger.dll
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\_build\debug\DefaultLogger.pdb
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\DefaultLogger\obj\Debug\DefaultLogger.dll
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\DefaultLogger\obj\Debug\DefaultLogger.pdb

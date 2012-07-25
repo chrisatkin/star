@@ -7,7 +7,6 @@ namespace org.btg.Star.Rhapsody
     {
         public static void Draw(ColourFrame frame, WriteableBitmap bitmap)
         {
-            System.Console.WriteLine("Drawing color frame");
             bitmap.WritePixels(new Int32Rect(0, 0, bitmap.PixelWidth, bitmap.PixelHeight), frame.Data, bitmap.PixelWidth * sizeof(int), 0);
         }
     }

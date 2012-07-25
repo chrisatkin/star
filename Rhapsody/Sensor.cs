@@ -14,6 +14,8 @@ namespace org.btg.Star.Rhapsody
 
         public IProvider Provider;
 
+        public ILogger Logger;
+
         private bool _started;
 
         public Sensor()
@@ -31,20 +33,9 @@ namespace org.btg.Star.Rhapsody
             }
 
             // Add listeners
-            if (this.ColourFrameReady != null)
-            {
-                this.Provider.ColourFrameReady += this._HandleColourFrameReady;
-            }
-
-            if (this.DepthFrameReady != null)
-            {
-                this.Provider.DepthFrameReady += this._HandleDepthFrameReady;
-            }
-
-            if (this.SkeletonFrameReady != null)
-            {
-                this.Provider.SkeletonFrameReady += this._HandleSkeletonFrameReady;
-            }
+            this.Provider.ColourFrameReady += this._HandleColourFrameReady;
+            this.Provider.DepthFrameReady += this._HandleDepthFrameReady;
+            this.Provider.SkeletonFrameReady += this._HandleSkeletonFrameReady;
 
             // Start the Sensor
             foreach (StreamType stream in streams)
@@ -52,35 +43,18 @@ namespace org.btg.Star.Rhapsody
                 this.Provider.Start(stream);
             }
 
+            this.Logger.Start();
+
             this._started = true;
         }
 
         public void Stop()
         {
-            if (this.Provider == null)
-            {
-                throw new InvalidOperationException("A data source/provider has not been specified");
-            }
+            this.Logger.Stop();
 
-            if (this._started == false)
+            if (this._started)
             {
-                throw new InvalidOperationException("Data collection has not been started");
-            }
-
-            // Remove listeners
-            if (this.ColourFrameReady != null)
-            {
-                this.Provider.ColourFrameReady -= this._HandleColourFrameReady;
-            }
-
-            if (this.DepthFrameReady != null)
-            {
-                this.Provider.DepthFrameReady -= this._HandleDepthFrameReady;
-            }
-
-            if (this.SkeletonFrameReady != null)
-            {
-                this.Provider.SkeletonFrameReady -= this._HandleSkeletonFrameReady;
+                this.Provider.Stop();
             }
 
             this._started = false;
@@ -103,6 +77,9 @@ namespace org.btg.Star.Rhapsody
 
         private void _HandleColourFrameReady(object sender, ColourFrameReadyEventArgs frame)
         {
+            // Log frame
+            this.Logger.LogFrame((ColourFrame) frame.Frame);
+
             foreach (Delegate d in this.ColourFrameReady.GetInvocationList())
             {
                 d.DynamicInvoke(new object[] { sender, frame });
@@ -111,6 +88,9 @@ namespace org.btg.Star.Rhapsody
 
         private void _HandleDepthFrameReady(object sender, DepthFrameReadyEventArgs frame)
         {
+            // Log frame
+            this.Logger.LogFrame((DepthFrame) frame.Frame);
+
             foreach (Delegate d in this.DepthFrameReady.GetInvocationList())
             {
                 d.DynamicInvoke(new object[] { sender, frame });
@@ -119,6 +99,9 @@ namespace org.btg.Star.Rhapsody
 
         private void _HandleSkeletonFrameReady(object sender, SkeletonFrameReadyEventArgs frame)
         {
+            // Log frame
+            this.Logger.LogFrame((SkeletonFrame) frame.Frame);
+
             foreach (Delegate d in this.SkeletonFrameReady.GetInvocationList())
             {
                 d.DynamicInvoke(new object[] { sender, frame });

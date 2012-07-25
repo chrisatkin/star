@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Windows;
@@ -40,6 +41,10 @@ namespace Viewer
             this._sensor.DepthFrameReady += this._DepthFrameReady;
             this._sensor.SkeletonFrameReady += this._SkeletonFrameReady;
 
+            // Set the logger
+            this._sensor.Logger = ModuleLoader.LoadLogger("DefaultLogger.dll");
+            this._sensor.Logger.Location = Path.Combine(new string[] { Directory.GetCurrentDirectory(), "logs" });
+
             // Discover the available providers and update the UI accordingly
             this._providers = Sensor.DiscoverServiceProviders();
 
@@ -57,11 +62,7 @@ namespace Viewer
         {
             // Change the data source
             Console.WriteLine("Changing providers to " + provider);
-            this._sensor.Provider = ProviderLoader.Load(provider);
-
-            // Change the UI (load from XAML)
-            //Assembly.LoadFrom(provider);
-            //todo: this
+            this._sensor.Provider = ModuleLoader.LoadProvider(provider);
         }
 
         // Device Event Listeners
