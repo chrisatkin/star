@@ -10,13 +10,13 @@ namespace org.btg.Star.Rhapsody
         /// <summary>
         /// Start all available streams on the device
         /// </summary>
-        void StartAll();
+        void Start();
 
         /// <summary>
         /// Start a particular StreamType
         /// </summary>
         /// <param name="stream">The stream to start</param>
-        void Start(StreamType stream);
+        void AddStream(StreamType stream);
 
         /// <summary>
         /// Stop all available streams

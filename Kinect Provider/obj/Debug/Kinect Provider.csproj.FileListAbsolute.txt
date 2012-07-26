@@ -1,5 +1,5 @@
-c:\users\chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\_build\debug\kinectprovider.dll
-c:\users\chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\_build\debug\kinectprovider.pdb
-c:\users\chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Kinect Provider\obj\Debug\ResolveAssemblyReference.cache
-c:\users\chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Kinect Provider\obj\Debug\kinectprovider.dll
-c:\users\chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Kinect Provider\obj\Debug\kinectprovider.pdb
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\_build\debug\kinectprovider.dll
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\_build\debug\kinectprovider.pdb
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Kinect Provider\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Kinect Provider\obj\Debug\kinectprovider.dll
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Kinect Provider\obj\Debug\kinectprovider.pdb

@@ -75,7 +75,7 @@ namespace Viewer
 
         private void _DepthFrameReady(object sender, DepthFrameReadyEventArgs frame)
         {
-            DepthDrawingHelper.Draw((DepthFrame) frame.Frame, this.depthBitmap);
+            //DepthDrawingHelper.Draw((DepthFrame) frame.Frame, this.depthBitmap);
         }
 
         private void _SkeletonFrameReady(object sender, SkeletonFrameReadyEventArgs frame)
@@ -108,8 +108,8 @@ namespace Viewer
         {
             try
             {
-                Console.WriteLine("Start button pressed");
-                this._sensor.Start(new StreamType[] { StreamType.SkeletonStream, StreamType.ColourStream });
+                this._sensor.AddStreams(new StreamType[] { StreamType.SkeletonStream, StreamType.ColourStream, StreamType.DepthStream });
+                this._sensor.Start();
             }
             catch (InvalidOperationException excep)
             {

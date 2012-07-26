@@ -40,53 +40,37 @@ namespace org.btg.Star.Rhapsody.Providers.Kinect
             Console.WriteLine("Found Kinect");
         }
 
-        public void StartAll()
+        public void Start()
         {
-            Console.WriteLine("In Provider.Start()");
-
-            foreach (StreamType stream in Enum.GetValues(typeof(StreamType)))
-            {
-                Console.WriteLine("Attempting to start " + stream.ToString());
-                this.Start(stream);
-            }
+            this._kinect.Start();
         }
 
-        public void Start(StreamType stream)
+        public void AddStream(StreamType stream)
         {
             if (!this.RespondsTo(stream))
             {
                 throw new InvalidOperationException("This provider does not respond to " + stream.ToString());
             }
-
             switch (stream)
             {
                 case StreamType.ColourStream:
-                    if (this.ColourFrameReady != null)
-                    {
                         this._kinect.ColorStream.Enable(Microsoft.Kinect.ColorImageFormat.RgbResolution640x480Fps30);
                         this._kinect.ColorFrameReady += this._HandleColourFrameReady;
-                    }
+                        Console.WriteLine("Added depth listener");
                 break;
 
                 case StreamType.DepthStream:
-                    if (this.DepthFrameReady != null)
-                    {
                         this._kinect.DepthStream.Enable(Microsoft.Kinect.DepthImageFormat.Resolution640x480Fps30);
                         this._kinect.DepthFrameReady += this._HandleDepthFrameReady;
-                    }
+                        Console.WriteLine("Added depth listener");
                 break;
 
                 case StreamType.SkeletonStream:
-                    if (this.SkeletonFrameReady != null)
-                    {
                         this._kinect.SkeletonStream.Enable();
                         this._kinect.SkeletonFrameReady += this._HandleSkeletonFrameReady;
                         Console.WriteLine("Added Skeleton listener");
-                    }
                 break;
             }
-
-            this._kinect.Start();
 
             Console.WriteLine("Started " + stream.ToString());
         }

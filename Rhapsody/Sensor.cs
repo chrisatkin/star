@@ -24,7 +24,7 @@ namespace org.btg.Star.Rhapsody
             this._started = false;
         }
 
-        public void Start(StreamType[] streams)
+        public void AddStreams(StreamType[] streams)
         {
             // Ensure there's a provider
             if (this.Provider == null)
@@ -32,19 +32,32 @@ namespace org.btg.Star.Rhapsody
                 throw new InvalidOperationException("A data source/provider has not been specified");
             }
 
-            // Add listeners
-            this.Provider.ColourFrameReady += this._HandleColourFrameReady;
-            this.Provider.DepthFrameReady += this._HandleDepthFrameReady;
-            this.Provider.SkeletonFrameReady += this._HandleSkeletonFrameReady;
-
             // Start the Sensor
             foreach (StreamType stream in streams)
             {
-                this.Provider.Start(stream);
+                this.Provider.AddStream(stream);
+
+                switch (stream)
+                {
+                    case StreamType.ColourStream:
+                        this.Provider.ColourFrameReady += this._HandleColourFrameReady;
+                    break;
+
+                    case StreamType.DepthStream:
+                        this.Provider.DepthFrameReady += this._HandleDepthFrameReady;
+                    break;
+
+                    case StreamType.SkeletonStream:
+                        this.Provider.SkeletonFrameReady += this._HandleSkeletonFrameReady;
+                    break;
+                }
             }
+        }
 
+        public void Start()
+        {
             this.Logger.Start();
-
+            this.Provider.Start();
             this._started = true;
         }
 

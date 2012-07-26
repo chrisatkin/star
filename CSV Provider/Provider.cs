@@ -17,16 +17,21 @@ namespace org.btg.Star.Rhapsody.Providers.Csv
             {
                 if (this.RespondsTo(stream))
                 {
-                    this.Start(stream);
+                    this.AddStream(stream);
                 }
             }
         }
 
-        public void Start(StreamType stream)
+        public void AddStream(StreamType stream)
         {
             this.VerifyRespondsTo(stream);
 
 
+        }
+
+        public void Start()
+        {
+            ;
         }
 
         public void Stop()
