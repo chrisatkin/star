@@ -1,0 +1,7 @@
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\CSV Provider\bin\Release\csvprovider.dll
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\CSV Provider\bin\Release\csvprovider.pdb
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\CSV Provider\bin\Release\rhapsody.dll
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\CSV Provider\bin\Release\rhapsody.pdb
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\CSV Provider\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\CSV Provider\obj\Release\csvprovider.dll
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\CSV Provider\obj\Release\csvprovider.pdb

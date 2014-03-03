@@ -1,0 +1,13 @@
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\_build\release\viewer.exe
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\_build\release\viewer.pdb
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Viewer\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Viewer\obj\x86\Release\MainWindow.baml
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Viewer\obj\x86\Release\MainWindow.g.cs
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Viewer\obj\x86\Release\App.g.cs
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Viewer\obj\x86\Release\viewer_MarkupCompile.cache
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Viewer\obj\x86\Release\viewer.g.resources
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Viewer\obj\x86\Release\org.btg.Star.Viewer.Properties.Resources.resources
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Viewer\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Viewer\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Viewer\obj\x86\Release\viewer.exe
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Viewer\obj\x86\Release\viewer.pdb

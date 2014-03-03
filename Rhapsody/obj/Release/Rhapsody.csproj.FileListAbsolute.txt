@@ -1,0 +1,5 @@
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\_build\release\rhapsody.dll
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\_build\release\rhapsody.pdb
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Rhapsody\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Rhapsody\obj\Release\rhapsody.dll
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Rhapsody\obj\Release\rhapsody.pdb

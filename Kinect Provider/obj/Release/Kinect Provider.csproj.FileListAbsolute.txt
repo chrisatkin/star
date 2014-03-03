@@ -1,0 +1,5 @@
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\_build\release\kinectprovider.dll
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\_build\release\kinectprovider.pdb
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Kinect Provider\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Kinect Provider\obj\Release\kinectprovider.dll
+C:\Users\Chris\documents\visual studio 2010\Projects\Simultaneous Tracking and Recording\Kinect Provider\obj\Release\kinectprovider.pdb
